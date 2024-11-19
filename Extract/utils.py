@@ -1,7 +1,7 @@
 import re
 
 def checkTitleLevel(title: str):
-    if "Junior" in title or "Jr." in title or "Jr" in title:
+    if "Junior" in title or "Jr." in title or "Jr" in title or "Interns" in title or "Intern" in title or "Trainee" in title:
         return 1
     elif "Mid" in title:
         return 2
