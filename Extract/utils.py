@@ -1,4 +1,5 @@
 import re
+import csv
 
 def checkTitleLevel(title: str):
     if "Junior" in title or "Jr." in title or "Jr" in title or "Interns" in title or "Intern" in title or "Trainee" in title:
@@ -183,3 +184,19 @@ def CheckForSkillString(description: str):
                 skills.append(skill)
 
     return skills
+
+def save_jobs_to_csv(job_listing, filename='jobs_listing_adzun.csv'):
+    """Save the job listings to a CSV file."""
+    if not job_listing:
+        print("No job listings to save.")
+        return
+
+    jobs_dict = [job.__dict__ for job in job_listing]
+    fieldnames = jobs_dict[0].keys()
+
+    with open(filename, mode='w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()  # Write the header (column names)
+        writer.writerows(jobs_dict)  # Write each job as a row in the CSV file
+
+    print(f"Data saved to {filename}")
