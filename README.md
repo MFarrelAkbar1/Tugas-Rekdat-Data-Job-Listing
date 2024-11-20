@@ -82,8 +82,12 @@ A scalable, automated ETL (Extract, Transform, Load) pipeline for job market dat
 - **Flexibility**: Modular design for easy extension and customization
 
 ## Resources
+
 For more details, visit our blog:  
 [Project Blog on Notion](https://noon-macaroon-442.notion.site/Data-Engineering-Job-Posting-143915b4f0868027ba1bde5a68cfc5c2?pvs=4)
 
 To run or explore the pipeline in Google Colab, check out:  
 [Google Colab Notebook](https://colab.research.google.com/drive/1U4z8dkjQ0lNUAsDKO2ZCIZ7geKSlpCHF?usp=sharing)
+
+Watch the video presentation here:  
+[Video Presentation on YouTube](https://youtu.be/o9BoCP-DfzI)
