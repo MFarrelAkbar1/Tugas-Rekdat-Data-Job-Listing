@@ -3,9 +3,9 @@
 This project focuses on creating an end-to-end (E2E) ETL (Extract, Transform, Load) pipeline for collecting, transforming, and analyzing job posting data. The goal is to design a data engineering pipeline that seamlessly integrates multiple data sources into a structured repository, enabling exploratory data analysis (EDA).
 
 # The Team
-Muhammad Farrel Akbar (22/492806/TK/53947) (Transform and Visualize Data)
-Muhammad Daffa Azfa Rabbani (22/503970/TK/55101) (Extract and Docker Data Engineer)
-Kholil Asjaduddin (22/504792/TK/55224) (Load and DB Engineer)
+- Muhammad Farrel Akbar (22/492806/TK/53947) (Transform and Visualize Data)
+- Muhammad Daffa Azfa Rabbani (22/503970/TK/55101) (Extract and Docker Data Engineer)
+- Kholil Asjaduddin (22/504792/TK/55224) (Load and DB Engineer)
 
 ## Pipeline Overview
 Our pipeline follows the classical ETL model:
