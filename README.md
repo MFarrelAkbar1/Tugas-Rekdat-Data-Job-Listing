@@ -49,7 +49,7 @@ Our pipeline follows the classical ETL model:
 ### Installation:
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/MFarrelAkbar1/Tugas-Rekdat-Data-Job-Listing.git
 # Job Market Data Pipeline
 
 ## Overview
