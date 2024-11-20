@@ -13,7 +13,7 @@ Our pipeline follows the classical ETL model:
 1. **Extract (E):**
    - Collect raw job posting data from:
      - **Adzuna API**: A job market API providing extensive job posting data.
-     - **Glassdoor API**: A resource for salary insights, job reviews, and postings.
+     - **Glassdoor Web Scraping**: A resource for salary insights, job reviews, and postings.
    - Tools: Python for API integrations and data extraction.
 
 2. **Transform (T):**
@@ -34,7 +34,7 @@ Our pipeline follows the classical ETL model:
 ## Architecture
 - **Data Sources:**
   - Adzuna (API)
-  - Glassdoor (API)
+  - Glassdoor (Webscraping)
 - **Database:**
   - Firebase (NoSQL)
 - **Visualization:**
@@ -45,8 +45,7 @@ Our pipeline follows the classical ETL model:
 ### Prerequisites:
 - Python 3.x
 - Firebase account
-- API keys for Adzuna and Glassdoor
-
+- API keys for Adzuna
 ### Installation:
 1. Clone the repository:
    ```bash
@@ -60,14 +59,11 @@ A scalable, automated ETL (Extract, Transform, Load) pipeline for job market dat
 - Python 3.8+
 - Firebase account
 - Adzuna API key
-- Glassdoor API key
 
 ## Installation
 
 ### Dependencies
-```bash
-pip install -r requirements.txt
-```
+
 
 ### Firebase Setup
 1. Create a Firebase project
@@ -81,27 +77,7 @@ ADZUNA_API_KEY=<your_adzuna_key>
 GLASSDOOR_API_KEY=<your_glassdoor_key>
 ```
 
-## Running the Pipeline
 
-### Extract Data
-```bash
-python extract.py
-```
-
-### Transform Data
-```bash
-python transform.py
-```
-
-### Load to Firebase
-```bash
-python load.py
-```
-
-### Exploratory Data Analysis
-```bash
-python eda.py
-```
 
 ## Key Features
 - **Scalability**: Supports multiple data sources and large datasets
