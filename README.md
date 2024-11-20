@@ -70,12 +70,8 @@ A scalable, automated ETL (Extract, Transform, Load) pipeline for job market dat
 2. Generate Firebase service account key
 3. Download and place the key in the project directory
 
-### API Keys
-Create a `.env` file with the following:
-```
-ADZUNA_API_KEY=<your_adzuna_key>
-GLASSDOOR_API_KEY=<your_glassdoor_key>
-```
+
+
 
 
 
