@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import csv
 from job_posting_glassdoor import Job_Posting_Glassdoor
-from utils import checkTitleLevel, contains_remote, check_job_type, CheckForSkill
+from utils import checkTitleLevel, contains_remote, check_job_type, CheckForSkill, save_jobs_to_csv
 
 # Load environment variables
 load_dotenv()
@@ -116,22 +116,7 @@ def parse_job_details(driver, job, index):
         return None
 
 
-# Save jobs to CSV
-def save_jobs_to_csv(job_listing, filename='jobs_listing.csv'):
-    """Save the job listings to a CSV file."""
-    if not job_listing:
-        print("No job listings to save.")
-        return
 
-    jobs_dict = [job.__dict__ for job in job_listing]
-    fieldnames = jobs_dict[0].keys()
-
-    with open(filename, mode='w', newline='') as file:
-        writer = csv.DictWriter(file, fieldnames=fieldnames)
-        writer.writeheader()  # Write the header (column names)
-        writer.writerows(jobs_dict)  # Write each job as a row in the CSV file
-
-    print(f"Data saved to {filename}")
 
 
 # Main function
@@ -147,7 +132,7 @@ def main():
             if job_object:
                 job_listing.append(job_object)
 
-        save_jobs_to_csv(job_listing)
+        save_jobs_to_csv(job_listing, filename='jobs_listing_glassdoor.csv')
 
     finally:
         driver.quit()
